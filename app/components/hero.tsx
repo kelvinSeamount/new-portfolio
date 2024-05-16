@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section className="max-w-[50rem] text-center mb-28 sm:mb-0 ">
+    <section className="max-w-[50rem] text-center mb-28 sm:mb-0" id="home">
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
