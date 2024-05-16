@@ -2,10 +2,14 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
+import { FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 const Hero = () => {
   return (
-    <section>
+    <section className="max-w-[50rem] text-center mb-28 sm:mb-0 ">
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -38,6 +42,58 @@ const Hero = () => {
           </motion.span>
         </div>
       </div>
+      <motion.h1
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="mb-10 pt-14 !leading-[1.5] font-medium sm:text-3xl text-2xl text-center"
+      >
+        <span className="font-bold">Hi there!</span> I am a
+        <span className="font-bold"> Frontend engineer </span>
+        specializing in building web applications with
+        <span className="font-bold"> JavaScript and TypeScript. </span>
+      </motion.h1>
+
+      <motion.div
+        className="flex items-center gap-8 px-14 sm:flex-row font-medium"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+        }}
+      >
+        <Link
+          href="#contact"
+          className="bg-gray-900 text-white px-7 flex items-center gap-2 rounded-full py-3 outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition group"
+        >
+          Contact me here
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+        </Link>
+
+        <a
+          className="bg-white py-3 px-7 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition group cursor-pointer border border-black/10"
+          href="/Emeka Nwachukwu Resume.pdf"
+          download
+        >
+          Download CV
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+        </a>
+
+        <a
+          className="bg-white p-4 text-gray-700 flex items-center rounded-full gap-2 outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition group cursor-pointer border border-black/10"
+          href="https://www.linkedin.com/in/emeka-nwachukwu-he-him-882b9b10a/"
+          target="_blank"
+        >
+          <BsLinkedin />
+        </a>
+
+        <a
+          className="bg-white p-4 text-gray-700 gap-2 rounded-full flex items-center outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition group cursor-pointer border border-black/10"
+          href="https://github.com/kelvinSeamount"
+          target="_blank"
+        >
+          <FaGithub />
+        </a>
+      </motion.div>
     </section>
   );
 };
