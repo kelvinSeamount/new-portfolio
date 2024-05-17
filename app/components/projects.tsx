@@ -9,7 +9,7 @@ const Projects = () => {
   const { ref } = useInViewSection("Projects");
 
   return (
-    <section id="projects" ref={ref} className="scroll-mt-28">
+    <section id="projects" ref={ref} className="scroll-mt-28 mb-28">
       <SectionHeading>My Projects</SectionHeading>
       {projectData.map((project, id) => (
         <React.Fragment key={id}>
