@@ -9,6 +9,7 @@ type ProjectsProps = {
   tags: string[];
   imageUrl: string;
 };
+
 const MyProjects = ({ description, imageUrl, tags, title }: ProjectsProps) => {
   const ref = useRef<HTMLDivElement>(null);
 

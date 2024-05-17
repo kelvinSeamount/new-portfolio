@@ -2,15 +2,22 @@
 import { motion } from "framer-motion";
 import React from "react";
 import SectionHeading from "./section-heading";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  //improve scroll in view function
+  const { ref, inView } = useInView({
+    threshold: 0.75,
+  });
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
-      className="mb-28 max-w-[45rem] leading-8 text-center sm:mb-40"
+      ref={ref}
+      className="mb-28 max-w-[45rem] leading-8 text-center sm:mb-40 scroll-mt-28"
     >
       <SectionHeading>About me</SectionHeading>
       <p className="mb-3">

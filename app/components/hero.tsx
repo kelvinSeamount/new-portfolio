@@ -6,10 +6,19 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
+import { useInView } from "react-intersection-observer";
 
 const Hero = () => {
+  //improve scroll in view function
+
+  const { ref, inView } = useInView({
+    threshold: 0.5,
+  });
   return (
-    <section className="max-w-[50rem] text-center mb-28 sm:mb-0" id="home">
+    <section
+      className="max-w-[50rem] text-center mb-28 sm:mb-0 scroll-mt-[100rem]"
+      id="home"
+    >
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
