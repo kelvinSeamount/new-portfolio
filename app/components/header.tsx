@@ -3,8 +3,13 @@ import React from "react";
 import { links } from "../lib/data";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { clsx } from "clsx";
+import useActiveContext from "../context/use.active-context";
 
 const Header = () => {
+  //SET ACTIVE LINKS
+  const { active, setActive, setTimeClick } = useActiveContext();
+
   return (
     <header className="relative z-[999]">
       <motion.div
@@ -17,15 +22,31 @@ const Header = () => {
           {links.map((link) => (
             <motion.li
               key={link.hash}
-              className="h-3/4 flex items-center justify-center"
+              className="h-3/4 flex items-center justify-center relative"
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
                 href={link.hash}
-                className="flex w-full items-center px-3 py-3 hover:text-slate-950 transition"
+                className={clsx(
+                  "flex w-full items-center px-3 py-3 hover:text-slate-950 transition",
+                  {
+                    "text-slate-950": active === link.name,
+                  }
+                )}
               >
                 {link.name}
+                {link.name === active ? (
+                  <motion.span
+                    layoutId="active"
+                    transition={{
+                      type: "spring",
+                      stiffness: 380,
+                      damping: 70,
+                    }}
+                    className="bg-gray-200 rounded-full absolute inset-0 -z-10"
+                  ></motion.span>
+                ) : null}
               </Link>
             </motion.li>
           ))}

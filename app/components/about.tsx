@@ -1,14 +1,23 @@
 "use client";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect } from "react";
 import SectionHeading from "./section-heading";
 import { useInView } from "react-intersection-observer";
+import useActiveContext from "../context/use.active-context";
 
 const About = () => {
   //improve scroll in view function
   const { ref, inView } = useInView({
     threshold: 0.75,
   });
+
+  const { setActive, timeClick } = useActiveContext();
+
+  useEffect(() => {
+    if (inView && Date.now() - timeClick > 1000) {
+      setActive("About");
+    }
+  }, [inView, setActive, timeClick]);
 
   return (
     <motion.section

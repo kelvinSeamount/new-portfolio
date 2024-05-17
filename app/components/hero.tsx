@@ -1,12 +1,13 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { useInView } from "react-intersection-observer";
+import useActiveContext from "../context/use.active-context";
 
 const Hero = () => {
   //improve scroll in view function
@@ -14,10 +15,20 @@ const Hero = () => {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
+
+  const { setActive, timeClick } = useActiveContext();
+
+  useEffect(() => {
+    if (inView && Date.now() - timeClick > 1000) {
+      setActive("Home");
+    }
+  }, [inView, setActive, timeClick]);
+
   return (
     <section
       className="max-w-[50rem] text-center mb-28 sm:mb-0 scroll-mt-[100rem]"
       id="home"
+      ref={ref}
     >
       <div className="flex items-center justify-center">
         <div className="relative">
