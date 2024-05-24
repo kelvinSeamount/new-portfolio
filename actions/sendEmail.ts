@@ -1,6 +1,8 @@
 "use server";
 import { getError, validateMessage } from "@/app/lib/utils";
 import { Resend } from "resend";
+import ContactForm from "@/email/contact-form";
+import React from "react";
 
 //initaite the process for the API KEY
 
@@ -27,7 +29,11 @@ export const sendEmail = async (formData: FormData) => {
       to: "kelvinnwachukwu89@gmail.com",
       subject: "Message from contact form",
       reply_to: senderEmail as string,
-      text: message as string,
+      react: React.createElement(ContactForm, {
+        senderEmail: senderEmail as string,
+        message: message as string,
+      }),
+      //react:<ContactForm message={message} senderEmail={senderEmail} />
     });
   } catch (error: unknown) {
     return {
