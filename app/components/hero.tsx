@@ -6,9 +6,11 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { useInViewSection } from "../lib/hooks";
+import useActiveContext from "../context/use.active-context";
 
 const Hero = () => {
-  const { ref } = useInViewSection("Home");
+  const { ref } = useInViewSection("Home", 0.5);
+  const { setActive, setTimeClick } = useActiveContext();
 
   return (
     <section
@@ -70,6 +72,10 @@ const Hero = () => {
         <Link
           href="#contact"
           className="bg-gray-900 text-white px-7 flex items-center gap-2 rounded-full py-3 outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition group"
+          onClick={() => {
+            setActive("Contact");
+            setTimeClick(Date.now());
+          }}
         >
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
