@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
 import SectionHeading from "./section-heading";
-import { FaPaperPlane } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useInViewSection } from "../lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
+import SubmitButton from "./submit-button";
 
 const Contact = () => {
   const { ref } = useInViewSection("Contact");
@@ -57,13 +57,7 @@ const Contact = () => {
           maxLength={5000}
           name="message"
         />
-        <button
-          type="submit"
-          className="flex items-center justify-center gap-2 h-[3rem] rounded-full text-white transition-all outline-none bg-gray-900 w-[7rem] group"
-        >
-          Sumbit{" "}
-          <FaPaperPlane className="text-xs transition-all group-hover:translate-x-1 group-hover:-translate-y-1 focus:scale-110 hover:scale-110 active:scale-105 hover:bg-gray-950" />
-        </button>
+        <SubmitButton />
       </form>
     </motion.section>
   );
