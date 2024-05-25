@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useInViewSection } from "../lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
 import SubmitButton from "./submit-button";
+import toast from "react-hot-toast";
 
 const Contact = () => {
   const { ref } = useInViewSection("Contact");
@@ -39,19 +40,24 @@ const Contact = () => {
       <form
         className="flex flex-col mt-10"
         action={async (formData) => {
-          await sendEmail(formData);
+          //Extract
+          const { data, error } = await sendEmail(formData);
+          if (error) {
+            toast.error(error);
+          }
+          toast.success("Email sent");
         }}
       >
         <input
           type="email"
           placeholder="Your email"
-          className="h-14 rounded-lg borderBlack px-4"
+          className="h-14 rounded-lg borderBlack px-4 dark:bg-white dark:bg-opacity-85 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           required
           maxLength={500}
           name="senderEmail"
         />
         <textarea
-          className="h-52 my-3 borderBlack p-4"
+          className="h-52 my-3 borderBlack p-4  dark:bg-white dark:bg-opacity-85 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           placeholder="Your message"
           required
           maxLength={5000}

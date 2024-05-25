@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ActiveContext } from "./active.context-provider";
+import { ActiveContext } from "./activecontext-provider";
 
 const useActiveContext = () => {
   const context = useContext(ActiveContext);

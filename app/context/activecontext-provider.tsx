@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { links } from "../lib/data";
 import type { SectionNameProps } from "../lib/types";
 
 type ActiveContextProviderProps = {

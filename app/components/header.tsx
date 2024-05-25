@@ -4,7 +4,7 @@ import { links } from "../lib/data";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { clsx } from "clsx";
-import useActiveContext from "../context/use.active-context";
+import useActiveContext from "../context/useactive-context";
 
 const Header = () => {
   //SET ACTIVE LINKS
@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <header className="relative z-[999]">
       <motion.div
-        className="fixed top-0 left-1/2  h-[4.5rem] w-full rounded-none border border-opacity-40 border-white bg-white bg-opacity-80 sm:top-6 sm:h-[52px] sm:w-[576px] sm:rounded-full shadow-lg shadow-black/[0.03] backdrop-blur-[8px]"
+        className="fixed top-0 left-1/2  h-[4.5rem] w-full rounded-none border border-opacity-40 border-white bg-white bg-opacity-80 sm:top-6 sm:h-[52px] sm:w-[576px] sm:rounded-full shadow-lg shadow-black/[0.03] backdrop-blur-[8px] dark:bg-gray-950 dark:border-black/40"
         initial={{ y: -100, x: "-50%", opacity: 0 }}
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
@@ -29,9 +29,9 @@ const Header = () => {
               <Link
                 href={link.hash}
                 className={clsx(
-                  "flex w-full items-center px-3 py-3 hover:text-slate-950 transition",
+                  "flex w-full items-center px-3 py-3 hover:text-slate-950 transition  dark:text-gray-500 dark:hover:text-slate-300",
                   {
-                    "text-slate-950": active === link.name,
+                    "text-slate-950 dark:text-slate-200": active === link.name,
                   }
                 )}
               >
@@ -44,7 +44,7 @@ const Header = () => {
                       stiffness: 380,
                       damping: 70,
                     }}
-                    className="bg-gray-200 rounded-full absolute inset-0 -z-10"
+                    className="bg-gray-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-800"
                   ></motion.span>
                 ) : null}
               </Link>

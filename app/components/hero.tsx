@@ -6,7 +6,7 @@ import { HiDownload } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import { useInViewSection } from "../lib/hooks";
-import useActiveContext from "../context/use.active-context";
+import useActiveContext from "../context/useactive-context";
 
 const Hero = () => {
   const { ref } = useInViewSection("Home", 0.5);
@@ -82,7 +82,7 @@ const Hero = () => {
         </Link>
 
         <a
-          className="bg-white py-3 px-7 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition group cursor-pointer border border-black/10"
+          className="bg-white py-3 px-7 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition group cursor-pointer border border-black/10 dark:bg-white/10"
           href="/Emeka Nwachukwu Resume.pdf"
           download
         >
@@ -91,7 +91,7 @@ const Hero = () => {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 flex items-center rounded-full gap-2 outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition group cursor-pointer border border-black/10"
+          className="bg-white p-4 text-gray-700 flex items-center rounded-full gap-2 outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition group cursor-pointer border border-black/10 dark:text-white/60  dark:bg-white/10"
           href="https://www.linkedin.com/in/emeka-nwachukwu-he-him-882b9b10a/"
           target="_blank"
         >
@@ -99,7 +99,7 @@ const Hero = () => {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 gap-2 rounded-full flex items-center outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition group cursor-pointer border border-black/10"
+          className="bg-white p-4 text-gray-700 gap-2 rounded-full flex items-center outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition group cursor-pointer border border-black/10  dark:text-white/60  dark:bg-white/10"
           href="https://github.com/kelvinSeamount"
           target="_blank"
         >
