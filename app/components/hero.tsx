@@ -62,7 +62,7 @@ const Hero = () => {
       </motion.h1>
 
       <motion.div
-        className="flex items-center gap-8 px-14 sm:flex-row font-medium"
+        className="flex flex-col items-center gap-8 px-14 sm:flex-row font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

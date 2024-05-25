@@ -54,7 +54,7 @@ const MyProjects = ({ description, imageUrl, tags, title }: ProjectsProps) => {
           src={imageUrl}
           alt="Eat-n-slipt app"
           quality={95}
-          className="shadow-2xl rounded-t-lg absolute top-8 -right-40 w-[28.25rem] group-odd:right-[initial] group-odd:-left-40 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 transition group-hover:scale-[1.04] group-odd:group-hover:translate-y-3 group-odd:group-hover:translate-x-3  group-odd:group-hover:rotate-2"
+          className="shadow-2xl rounded-t-lg absolute top-8 -right-40 w-[28.25rem] group-odd:right-[initial] group-odd:-left-40 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 transition group-hover:scale-[1.04] group-odd:group-hover:translate-y-3 group-odd:group-hover:translate-x-3  group-odd:group-hover:rotate-2 hidden sm:block"
         />
       </article>
     </motion.div>
