@@ -29,7 +29,7 @@ const Contact = () => {
       className="mb-20 sm:mb-28 w-[min(100%,38rem)]"
     >
       <SectionHeading>Contact me</SectionHeading>
-      <p className="text-gray-700 text-center -mt-6">
+      <p className="text-gray-700 text-center -mt-6 dark:text-white/85">
         Get in touch with me directly @{" "}
         <a href="mailto:kelvinnwachukwu89@gmail.com" className="underline">
           kelvinnwachukwu89@gmail.com
@@ -51,13 +51,13 @@ const Contact = () => {
         <input
           type="email"
           placeholder="Your email"
-          className="h-14 rounded-lg borderBlack px-4 dark:bg-white dark:bg-opacity-85 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 rounded-lg borderBlack px-4 dark:bg-white dark:bg-opacity-85 dark:focus:bg-opacity-100 transition-all dark:outline-none dark:text-gray-800"
           required
           maxLength={500}
           name="senderEmail"
         />
         <textarea
-          className="h-52 my-3 borderBlack p-4  dark:bg-white dark:bg-opacity-85 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 my-3 borderBlack p-4  dark:bg-white dark:bg-opacity-85 dark:focus:bg-opacity-100 transition-all dark:outline-none  dark:text-gray-800"
           placeholder="Your message"
           required
           maxLength={5000}
