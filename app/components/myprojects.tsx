@@ -2,13 +2,9 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
+import { projectData } from "../lib/data";
 
-type ProjectsProps = {
-  title: string;
-  description: string;
-  tags: string[];
-  imageUrl: string;
-};
+type ProjectsProps = (typeof projectData)[number];
 
 const MyProjects = ({ description, imageUrl, tags, title }: ProjectsProps) => {
   const ref = useRef<HTMLDivElement>(null);
