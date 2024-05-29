@@ -84,7 +84,7 @@ const Hero = () => {
 
         <a
           className="bg-white py-3 px-7 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition group cursor-pointer border border-black/10 dark:bg-white/10"
-          href="/Emeka Nwachukwu Resume.pdf"
+          href="/Emeka Nwachukwu Frontend Developer.pdf"
           download
         >
           Download CV
