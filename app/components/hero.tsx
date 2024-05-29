@@ -1,4 +1,5 @@
 "use client";
+import emeka from "@/public/emeka.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -26,7 +27,7 @@ const Hero = () => {
             transition={{ type: "keyframes", duration: 0.5 }}
           >
             <Image
-              src={"/emeka.png"}
+              src={emeka}
               alt="My Potrait"
               width={192}
               height={95}
