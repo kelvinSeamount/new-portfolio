@@ -26,7 +26,7 @@ const Hero = () => {
             transition={{ type: "keyframes", duration: 0.5 }}
           >
             <Image
-              src={"/Emeka-icon.png"}
+              src={"/emeka.png"}
               alt="My Potrait"
               width={192}
               height={95}
