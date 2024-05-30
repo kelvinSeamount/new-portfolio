@@ -22,8 +22,8 @@ const About = () => {
           geologist-turned-frontend developer
         </span>{" "}
         passionate about sustainability and creativity, dedicated to
-        <span className="font-bold">building eco-friendly web solutions</span>.
-        Outside of coding, I enjoy video games and running .Currently, I&apos;m
+        <span className="font-bold"> building eco-friendly web solutions</span>.
+        Outside of coding, I enjoy video games and running. Currently, I&apos;m
         improving my backend skills, focusing on
         <span className="italic font-bold"> Node.js.</span> {""}
         I&apos;m actively seeking a full-time software developer role and would
