@@ -3,10 +3,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
 import { projectData } from "../lib/data";
+import Link from "next/link";
 
 type ProjectsProps = (typeof projectData)[number];
 
-const MyProjects = ({ description, imageUrl, tags, title }: ProjectsProps) => {
+const MyProjects = ({ description, imageUrl, tags, title ,projectUrl}: ProjectsProps) => {
   const ref = useRef<HTMLDivElement>(null);
 
   //scroll effect
@@ -28,31 +29,33 @@ const MyProjects = ({ description, imageUrl, tags, title }: ProjectsProps) => {
       ref={ref}
       className="mb-3 sm:mb-8 last:mb-0 group"
     >
-      <article className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition group-odd:pl-8 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white">
-        <div className="py-4 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] h-full flex flex-col">
-          <h3 className="text-2xl font-bold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
-            {description}
-          </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, id) => (
-              <li
-                key={id}
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
-              >
-                {tag}
-              </li>
-            ))}
-          </ul>
-        </div>
+      <Link href={projectUrl} target="_blank" rel="noopener noreferrer">
+        <article className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition group-odd:pl-8 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white">
 
-        <Image
-          src={imageUrl}
-          alt="Eat-n-slipt app"
-          quality={95}
-          className="shadow-2xl rounded-t-lg absolute top-8 -right-40 w-[28.25rem] group-odd:right-[initial] group-odd:-left-40 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 transition group-hover:scale-[1.04] group-odd:group-hover:translate-y-3 group-odd:group-hover:translate-x-3  group-odd:group-hover:rotate-2 hidden sm:block"
-        />
-      </article>
+          <div className="py-4 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] group-odd:sm:ml-[50%] group-odd:sm:max-w-none group-odd:sm:w-[50%] h-full flex flex-col relative z-20 group-odd:sm:pl-8">
+            <h3 className="text-2xl font-bold">{title}</h3>
+            <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+              {description}
+            </p>
+            <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto relative z-30 group-odd:sm:pr-8">
+              {tags.map((tag, id) => (
+                <li
+                  key={id}
+                  className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                >
+                  {tag}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <Image
+            src={imageUrl}
+            alt="Project I worked on"
+            quality={95}
+            className="shadow-2xl rounded-t-lg absolute top-8 -right-40 w-[28.25rem] group-odd:right-[initial] group-odd:-left-40 group-hover:translate-x-3 group-hover:translate-y-3 group-hover:-rotate-2 transition group-hover:scale-[1.04] group-odd:group-hover:translate-y-3 group-odd:group-hover:translate-x-3 group-odd:group-hover:rotate-2 hidden sm:block z-10"
+          />
+        </article>
+      </Link>
     </motion.div>
   );
 };
