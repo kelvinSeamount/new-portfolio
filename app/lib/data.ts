@@ -39,6 +39,12 @@ export const skillsData = [
   "Redux",
   "Express",
   "Framer Motion",
+  "Docker",
+  "Kubernetes",
+  "Terraform",
+  "Ansible",
+  "Grafana",
+  "Prometheus",
 ] as const;
 
 export const projectData = [

@@ -56,10 +56,15 @@ const Hero = () => {
         animate={{ opacity: 1, y: 0 }}
         className="mb-10 pt-14 !leading-[1.5] font-medium sm:text-3xl text-2xl text-center"
       >
-        <span className="font-bold">Hi there!</span> I&apos;m Emeka
-        <span className="font-bold"> Frontend engineer </span>
-        specializing in building web applications with
-        <span className="font-bold"> JavaScript and TypeScript. </span>
+        <span className="font-bold">Hi there!</span> I&apos;m Emeka, a
+        <span className="font-bold"> Frontend Engineer </span>
+        with a growing focus on
+        <span className="font-bold"> DevOps engineering. </span>I build modern
+        web applications with
+        <span className="font-bold">
+          {" "}
+          JavaScript, TypeScript, and cloud-native technologies.{" "}
+        </span>
       </motion.h1>
 
       <motion.div
