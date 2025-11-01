@@ -1,5 +1,7 @@
 import EatnslipImg from "@/public/Eatnslip.png";
 import DashboardImg from "@/public/Dashboard.png";
+import K8sTracingImg from "@/public/K8s-tracing.png";
+import FlowImg from "@/public/Flow.png";
 
 export const links = [
   {
@@ -64,4 +66,26 @@ export const projectData = [
     imageUrl: DashboardImg,
     projectUrl: "https://kelvinseamount.github.io/Observability-Dashboard/"
   },
+  {
+    title: "Kubernetes Distributed Tracing",
+    description:
+      "A minimal K8s distributed tracing stack using Grafana Tempo, Alloy, and k6 trace generator. Deploy it, see traces flow and understand how microservices works.",
+    tags: ["Kubernetes", "Grafana Tempo", "Alloy", "k6"],
+    imageUrl: K8sTracingImg,
+    projectUrl: "https://github.com/kelvinSeamount/K8-Tracing"
+  },
+  {
+    title: "Corporate Bank App Mega Devops Project",
+    description:
+      "Enterprise CI/CD with Jenkins, SonarQube, Trivy, Nexus, AWS EKS, and Prometheus/Grafana. Automated testing, security scanning, and full observability.",
+    tags: [
+      "Jenkins",
+      "SonarQube",
+      "Trivy",
+      "Nexus",
+      "AWS EKS",
+    ],
+    imageUrl: FlowImg,
+    projectUrl: "https://github.com/kelvinSeamount/Bank-App-CD"
+  }
 ];
