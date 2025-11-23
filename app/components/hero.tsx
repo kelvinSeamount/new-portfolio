@@ -153,7 +153,7 @@ const Hero = () => {
 
         <div className="flex flex-col gap-3">
           
-            <a href="/Emeka%20Devops%20CV.docx.pdf"
+            <a href="/Emeka%20CV%20Devops.docx.pdf"
             download
             onClick={() => setShowCVModal(false)}
             className="bg-gray-900 hover:bg-gray-950 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-4 rounded-xl flex items-center justify-between transition group"
@@ -166,7 +166,7 @@ const Hero = () => {
           </a>
 
           
-           <a href="/Emeka%20Devops%20Deutsch%20CV.docx.pdf"
+           <a href="/Emeka%20CV%20Devops%20Deutsch.docx.pdf"
             download
             onClick={() => setShowCVModal(false)}
             className="bg-gray-900 hover:bg-gray-950 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-4 rounded-xl flex items-center justify-between transition group"
