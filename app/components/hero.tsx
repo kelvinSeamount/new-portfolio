@@ -54,21 +54,22 @@ const Hero = () => {
           </motion.span>
         </div>
       </div>
-      <motion.h1
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mb-10 pt-14 !leading-[1.5] font-medium sm:text-3xl text-2xl text-center"
-      >
-        <span className="font-bold">Hi there!</span> I&apos;m Emeka, a
-        <span className="font-bold"> Frontend Engineer </span>
-        with a growing focus on
-        <span className="font-bold"> DevOps engineering. </span>I build modern
-        web applications with
-        <span className="font-bold">
-          {" "}
-          JavaScript, TypeScript, and cloud-native technologies.{" "}
-        </span>
-      </motion.h1>
+<motion.h1
+  initial={{ opacity: 0, y: 100 }}
+  animate={{ opacity: 1, y: 0 }}
+  className="mb-10 pt-14 !leading-[1.5] font-medium sm:text-3xl text-2xl text-center"
+>
+  <span className="font-bold">Hi there!</span> I&apos;m Emeka, a
+  <span className="font-bold"> Junior Full-Stack Engineer </span>
+  with experience building modern web applications using
+  <span className="font-bold"> JavaScript and TypeScript. </span>
+  I&apos;m also expanding my skills in
+  <span className="font-bold">
+    {" "}
+    DevOps, cloud infrastructure, and automation{" "}
+  </span>
+  to build scalable and reliable systems.
+</motion.h1>
 
       <motion.div
         className="flex flex-col justify-center gap-8 px-14 sm:flex-row font-medium"

@@ -19,14 +19,14 @@ const About = () => {
      <p className="mb-3">
   I&apos;m a {""}
   <span className="font-bold">
-    frontend developer with a background in geology, now specializing in
+    Junior Full-Stack Engineer with a background in geology, now specializing in
     DevOps engineering
   </span>
   , driven by a passion for automation, cloud infrastructure, and
   sustainable technology solutions. I specialize in {""}
   <span className="font-bold">
     designing scalable, secure, and efficient systems across cloud
-    platforms
+    platforms {""}
   </span>
   that enhance development workflows and deployment reliability.  
   I work extensively with tools such as
